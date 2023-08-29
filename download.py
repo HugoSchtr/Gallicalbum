@@ -41,7 +41,8 @@ with open('./gallicalbum.csv', mode='r', encoding='utf-8') as fh:
                 shutil.copyfileobj(r_image.raw, f)
                 print('Donwnload complete!')
 
-        # Keeping that snippet of code in case current method does not work
+
+        # Keeping that snippet of code in case current method does not work because of permalinks
         '''if request_counter == 5:
             request_counter = 0
             print('time to sleep')
