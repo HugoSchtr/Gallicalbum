@@ -39,7 +39,13 @@ with open('./gallicalbum.csv', mode='r', encoding='utf-8') as fh:
             print(f'Downloading {image_url}')
             with open(f'./{dataset_folder_name}/{image_name}.jpeg', 'wb') as f:
                 shutil.copyfileobj(r_image.raw, f)
-                print('Donwnload complete!')
+                #TODO: remove Gallica border at the bottom of the downloaded image
+                print('Download complete!')
+        
+        if request_counter == 5:
+            request_counter = 0
+            # Apparently there is no need to limit requests to Gallica server at this time
+            # time.sleep(62)
 
 
         # Keeping that snippet of code in case current method does not work because of permalinks
