@@ -4,6 +4,8 @@ Gallicalbum is a dataset of blank pages taken from manuscripts digitized and dis
 
 The dataset is distributed in the form of a CSV file listing URL to access the images on the IIIF server offered by Gallica. 
 
+## Download the dataset
+
 In order to download the dataset, you need to:
 
 - clone the repository
