@@ -7,10 +7,9 @@ import requests
 
 dataset_folder_name = 'dataset'
 
-if not os.path.exists(f'/{dataset_folder_name}'):
-    pass
-else:
-    os.makedirs('./dataset')
+if not os.path.exists(dataset_folder_name):
+    os.makedirs(dataset_folder_name)
+
 
 gallica_iiif_base_url = "https://gallica.bnf.fr/iiif/"
 request_counter = 0
