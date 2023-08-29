@@ -13,28 +13,23 @@ else:
     os.makedirs('./dataset')
 
 gallica_iiif_base_url = "https://gallica.bnf.fr/iiif/"
-
 request_counter = 0
 
 with open('./gallicalbum.csv', mode='r', encoding='utf-8') as fh:
     metadata = csv.reader(fh, delimiter=',')
     next(metadata)
+    dataset = [link[0].replace('.item', '').replace('#', '') for link in metadata]
 
     # keeping that snippet of code in case of, format: [[ark, folio]]
     # dataset = [['/'.join(link[0].split('/')[3:6]), link[0].split('/')[6].replace('.item', '')]
             #    for link in metadata]
 
-    dataset = [link[0].replace('.item', '').replace('#', '') for link in metadata]
-
     for image in dataset:
         request_counter += 1
-
         image_name = '_'.join(image.split('/')[4:6])
-
         image_url = image + '/full/full/0/native.jpeg'
 
         r_image = requests.get(image_url, stream=True)
-
         if r_image.status_code == 200:
             print(f'Downloading {image_url}')
             with open(f'./{dataset_folder_name}/{image_name}.jpeg', 'wb') as f:
