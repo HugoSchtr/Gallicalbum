@@ -1,6 +1,6 @@
 # Gallicalbum
 
-Gallicalbum is a dataset of blank pages taken from manuscripts digitized and distrubuted via the Gallica web portal.
+Gallicalbum is a dataset of blank pages taken from manuscripts digitized and distrubuted via the [Gallica web portal](https://gallica.bnf.fr). 
 
 The dataset is distributed in the form of a CSV file listing URL to access the images on the IIIF server offered by Gallica. 
 
@@ -9,14 +9,31 @@ The dataset is distributed in the form of a CSV file listing URL to access the i
 In order to download the dataset, you need to:
 
 - clone the repository
-- create a Python virtual environnement and install `requests`
+- create a Python virtual environnement and install `requests` with pip
 - run `python download.py` (Linux syntax)
 
-The `download.py` script will create a directory named `dataset/` in which we can find all the images composing the Gallicalbum dataset!
+The `download.py` script will create a directory named `data/` in which we can find all the images composing the Gallicalbum dataset!
+
+A typical series of commands, on Linux, to download the dataset could be:
+
+```sh
+$ git clone git@github.com:HugoSchtr/Gallicalbum.git
+$ cd Gallicalbum/
+$ python -m venv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
+$ python download.py
+```
 
 Et voilà!
 
+## Examples of images contained in the dataset
+
+<img src="./img/12148_bd6t5368418v.jpeg" width="150" align="center"><img src="./img/12148_bpt6k3043880d.jpeg" width="150" align="center"><img src="./img/12148_bpt6k3142288.jpeg" width="150" align="center">
+
 ## Citation
+
+If you use this dataset, please cite us!
 
 ```
 @misc{Chague_Gallicalbum_2023,

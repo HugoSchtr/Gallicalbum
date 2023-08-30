@@ -5,7 +5,8 @@ import time
 
 import requests
 
-dataset_folder_name = 'dataset'
+# you can change this value if you want
+dataset_folder_name = 'data'
 
 if not os.path.exists(dataset_folder_name):
     os.makedirs(dataset_folder_name)
