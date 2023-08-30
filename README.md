@@ -27,6 +27,14 @@ $ python download.py
 
 Et voilà!
 
+## Image definition
+
+Currently, Gallica has put in place a download limitation of 5 HD images per minute, so downloading the entire dataset can take a while because we had to put a 1 minute-long cool down in place every 5 images. If you want to take a quick look at the dataset or if you don't mind using a lower definition for the images, you can use the `-low` option when executing `download.py`. It will download the whole dataset very quickly. The command looks like this:
+
+```sh
+python download.py -low 
+```
+
 ## Examples of images contained in the dataset
 
 <img src="./img/12148_bpt6k97798371_f29.jpg" height="250" align="center"> | <img src="./img/12148_btv1b9060129s_f55.jpg" height="250" align="center"> | <img src="./img/12148_btv1b525056400_f59.jpg" height="250" align="center"> | <img src="./img/12148_btv1b52509569v_f193.jpg" height="250" align="center">
