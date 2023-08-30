@@ -26,7 +26,7 @@ with open('./gallicalbum.csv', mode='r', encoding='utf-8') as fh:
 
     for image in dataset:
         request_counter += 1
-        image_name = '_'.join(image.split('/')[4:6])
+        image_name = '_'.join(image.split('/')[4:7])
         image_url = image + '/full/full/0/native.jpeg'
 
         r_image = requests.get(image_url, stream=True)
@@ -58,7 +58,7 @@ with open('./gallicalbum.csv', mode='r', encoding='utf-8') as fh:
             http_response = r_manifest.json()
             manifest_images = http_response['sequences'][0]['canvases']
             image_link = [link['images'][0]['resource']['@id']
-                           for link in manifest_images if link['@id'] == image_id]
+                            for link in manifest_images if link['@id'] == image_id]
             
             print(image_link)
             
