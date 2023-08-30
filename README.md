@@ -29,7 +29,7 @@ Et voilà!
 
 ## Examples of images contained in the dataset
 
-<img src="./img/12148_bd6t5368418v.jpeg" width="150" align="center"><img src="./img/12148_bpt6k3043880d.jpeg" width="150" align="center"><img src="./img/12148_bpt6k3142288.jpeg" width="150" align="center">
+<img src="./img/12148_bpt6k3142288.jpeg" height="500" align="center"> | <img src="./img/12148_bd6t5368418v.jpeg" height="500" align="center"> | <img src="./img/12148_bpt6k3043880d.jpeg" height="500" align="center">
 
 ## Citation
 
