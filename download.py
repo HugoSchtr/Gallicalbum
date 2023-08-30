@@ -2,10 +2,11 @@ import argparse
 import csv
 import os
 import shutil
+import sys
 import time
 
 import requests
-import sys
+
 
 parser = argparse.ArgumentParser(description='Download the Gallicalbum dataset.')
 parser.add_argument('-low', action='store_true', help='Download the lower resolution version of the dataset. Default: high resolution')
@@ -27,10 +28,10 @@ with open('./gallicalbum.csv', mode='r', encoding='utf-8') as fh:
             #    for link in metadata]
 
 # download images
-gallica_iiif_base_url = "https://gallica.bnf.fr/iiif"
 cool_down = 59 # seconds
-request_counter = 0
 
+gallica_iiif_base_url = "https://gallica.bnf.fr/iiif"
+request_counter = 0
 download_error = 0
 
 if args.low:
@@ -80,10 +81,11 @@ else:
             print("\n")
             request_counter = 0
 
+print("-----")
 if download_error == 0:
     print("Gallicalbum dataset downloaded successfully!")
 else:
-    print("Dataset downloaded with errors. Please check the logs above ([E]).")
+    print("Gallicalbum downloaded with errors. Please check the logs above ([E]).")
     print(f"{download_error}/{len(dataset)} images could not be downloaded.")
     print("In case of errors 429 from the server, you might want to increase the cool down time `download.py`.")
 
