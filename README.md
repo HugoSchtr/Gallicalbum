@@ -29,7 +29,9 @@ Et voilà!
 
 ## Image definition (the `-low` option)
 
-Currently, Gallica has put in place a download limitation of 5 HD images per minute. Downloading the entire dataset can take a while because we had to put a 1 minute-long cool down in place every 5 images. If you want to take a quick look at the dataset or if you don't mind using a lower definition for the images, you can use the `-low` option when executing `download.py`. It will download the whole dataset very quickly. The command looks like this:
+Currently, Gallica has put in place a download limitation of 5 HD images per minute. Downloading the entire dataset can take a while because we had to put a 1 minute-long cool down in place every 5 images. If you want to take a quick look at the dataset or if you don't mind using a lower definition for the images, you can use the `-low` option when executing `download.py`. It will download the whole dataset very quickly but with images in low resolution. 
+
+The command looks like this:
 
 ```sh
 python download.py -low 
