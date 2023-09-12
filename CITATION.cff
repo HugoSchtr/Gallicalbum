@@ -1,0 +1,33 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Gallicalbum
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Alix
+    family-names: Chagué
+    email: alix.chague@inria.fr
+    affiliation: 'ALMAnaCH, INRIA'
+    orcid: 'https://orcid.org/0000-0002-0136-4434'
+  - given-names: Hugo
+    family-names: Scheithauer
+    email: hugo.scheithauer@inria.fr
+    affiliation: 'ALMAnaCH, INRIA'
+    orcid: 'https://orcid.org/0000-0002-5659-4675'
+repository-code: 'https://github.com/HugoSchtr/Gallicalbum/'
+abstract: >-
+  Gallicalbum is a dataset of blank pages taken from
+  manuscripts digitized and distrubuted via the Gallica web
+  portal. It is distributed in the form of a CSV file with a
+  Python script to build the dataset.
+keywords:
+  - Gallica
+  - manuscripts
+  - blank page
+  - dataset
+license: CC-BY-SA-4.0
+date-released: '2023-08-29'
